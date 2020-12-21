@@ -1,0 +1,37 @@
+# include <stdio.h>
+char grade(float marks)
+{
+    if(marks < 0)
+    {
+       printf("Invalid\n");
+    }
+    else if(marks >= 85 && marks <= 100)
+    {
+        return 'A';
+    }
+    else if(marks >= 70 && marks <=84 )
+    {
+        return 'B';
+    }
+    else if(marks >= 55 && marks <=69 )
+    {
+        return 'C';
+    }
+    else if(marks >= 40 && marks <=54 )
+    {
+        return 'D';
+    }
+    else
+    {
+        return 'F';
+    }
+}
+
+int main()
+{
+    float marks;
+    printf("Enter Marks : ");
+    scanf("%f",&marks);
+    printf("Grade %c",grade(marks));
+    return 0;
+}
